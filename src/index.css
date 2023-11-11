@@ -32,5 +32,37 @@ input[type='number'] {
 }
 
 @layer components {
-  /* add your Tailwind components here */
+  .circle-part {
+    @apply absolute block;
+  }
+
+  .circle-top {
+    @apply circle-part top-0 left-[-100%] w-full h-0.5 bg-gradient-to-r from-transparent to-[#45f3ff];
+  }
+
+  .circle-right {
+    @apply circle-part top-[-100%] right-0 w-0.5 h-full bg-gradient-to-b from-transparent to-[#45f3ff];
+  }
+
+  .circle-bottom {
+    @apply circle-part bottom-0 right-[-100%] w-full h-0.5 bg-gradient-to-l from-transparent to-[#45f3ff];
+  }
+
+  .circle-left {
+    @apply circle-part bottom-[-100%] left-[0] w-0.5 h-full bg-gradient-to-t from-transparent to-[#45f3ff];
+  }
 }
+
+/*
+  <div className="inline-block relative overflow-hidden">
+    <span className="circle-top animate-border-circle-top" />
+    <span className="circle-right animate-border-circle-right !animation-delay-1000" />
+    <span className="circle-bottom animate-border-circle-bottom !animation-delay-2000" />
+    <span className="circle-left animate-border-circle-left !animation-delay-3000" />
+    <span className="circle-bottom animate-border-circle-bottom" />
+    <span className="circle-left animate-border-circle-left !animation-delay-1000" />
+    <span className="circle-top animate-border-circle-top !animation-delay-2000" />
+    <span className="circle-right animate-border-circle-right !animation-delay-3000" />
+    <div className="p-0.5">Awesome things</div>
+  </div>
+*/

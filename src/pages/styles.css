@@ -1,0 +1,50 @@
+.border-animation {
+  position: relative;
+  width: 200px; /* Adjust the size as needed */
+  height: 200px; /* Adjust the size as needed */
+  border: 2px solid #45f3ff; /* Border color and width */
+  border-radius: 50%; /* To create a circular shape */
+  animation: rotate 6s linear infinite; /* Customize duration and timing function */
+}
+
+.border-line {
+  position: absolute;
+  width: 2px; /* Adjust the thickness of the lines as needed */
+  height: 100%;
+  background-color: #45f3ff; /* Line color */
+  animation: move 6s linear infinite alternate; /* Customize duration and timing function */
+}
+
+.border-line-1 {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  animation-delay: 0s; /* Delay the animation for the first line */
+}
+
+.border-line-2 {
+  top: 50%;
+  left: 100%;
+  transform: translateY(-50%);
+  animation-delay: 3s; /* Delay the animation for the second line */
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes move {
+  0% {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  100% {
+    left: 0%;
+    transform: translateX(0);
+  }
+}

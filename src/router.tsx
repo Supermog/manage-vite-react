@@ -2,7 +2,7 @@ import { createBrowserRouter } from 'react-router-dom';
 import { ROUTE_PATHS } from '@/config/route-paths.config';
 
 import { RouteWrapper } from '@/components/utils/route-wrapper';
-import { Layout } from '@/components/layouts/layout';
+import { AuthLayout } from '@/components/layouts/auth-layout';
 import { AuthGuard } from '@/components/auth/auth-guard';
 import { GuestGuard } from '@/components/auth/guest-guard';
 
@@ -11,7 +11,7 @@ import { SignIn } from '@/pages/sign-in';
 
 const router = createBrowserRouter([
   {
-    element: <RouteWrapper guard={AuthGuard} layout={Layout} />,
+    element: <RouteWrapper guard={AuthGuard} />,
     children: [
       {
         path: ROUTE_PATHS.root,
@@ -21,7 +21,7 @@ const router = createBrowserRouter([
   },
   {
     path: ROUTE_PATHS.auth,
-    element: <RouteWrapper guard={GuestGuard} layout={Layout} />,
+    element: <RouteWrapper guard={GuestGuard} layout={AuthLayout} />,
     children: [
       {
         path: ROUTE_PATHS.signIn,
