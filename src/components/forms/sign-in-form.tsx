@@ -45,9 +45,11 @@ function SigninForm() {
           <Button isLoading={methods.formState.isSubmitting} className="mt-1">
             Login
           </Button>
+          {error ? (
+            <p className="text-red-500 mt-3 text-center">{error}</p>
+          ) : null}
         </fieldset>
       </form>
-      {error ? <p className="text-red-500 mt-3 text-center">{error}</p> : null}
     </FormProvider>
   );
 }

@@ -1,7 +1,7 @@
 export const buttonVariant = Object.freeze({
   primary: {
     button:
-      'bg-indigo-500 hover:bg-brand-alt-700 hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500 text-white',
+      'bg-blue-700 hover:bg-brand-alt-700 hover:bg-blue-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 text-white',
     icon: '',
   },
   secondary: {
